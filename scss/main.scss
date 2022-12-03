@@ -1,0 +1,83 @@
+@import "variables";
+
+*{
+    font-family: 'Manrope', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+button{
+    border: none;
+}
+
+main{
+    height: 100vh;
+    min-height: 500px;
+    background-color: $dark_blue;
+    display: grid;
+    place-items: center;
+
+
+    .advice-section{
+        background-color: $dark_grayish_blue;
+        height: 350px;
+        width: min(90%, 700px);
+        border-radius: 15px;
+        display: grid;
+        align-content: center;
+        gap: 40px;
+        justify-items: center;
+        position: relative;
+
+        header{
+            h1{
+                color: $neon_green;
+                font-size: 0.9rem;
+                letter-spacing: 5px;
+            }
+        }
+
+        .advice{
+            color: $light_cyan;
+            font-size: 1.5rem;
+            text-align: center;
+            width: 73%;
+        }
+
+        .image-container{
+            img:nth-child(2){
+                display: none;
+            }
+        }
+
+        .get-random-advice-button{
+            background-color: $neon_green;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            cursor: pointer;
+            position: absolute;
+            bottom: -30px;
+        }
+    }
+}
+
+@media (max-width: 550px) {
+    main{
+        .advice-section{
+            .image-container{
+                img:nth-child(2){
+                    display: block;
+                }
+                img:nth-child(1){
+                    display: none;
+                }
+            }
+
+            .advice{
+                width: 90%;
+            }
+        }
+    }
+}
