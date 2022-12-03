@@ -60,6 +60,10 @@ main{
             position: absolute;
             bottom: -30px;
         }
+        .get-random-advice-button:hover{
+            transition: 300ms;
+            box-shadow: 5px 5px 15px $neon_green, -5px -5px 15px $neon_green;
+        }
     }
 }
 
